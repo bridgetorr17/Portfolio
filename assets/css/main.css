@@ -2638,9 +2638,17 @@ input, select, textarea {
 			margin: 0;
 		}
 
+		#header h1 strong{
+			font-size: 2em;
+		}
+
+		#header h2 {
+			color: rgba(255, 255, 255, 0.5);
+		}
+
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 10.25em;
 		}
 
 /* Footer */
