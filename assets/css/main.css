@@ -97,7 +97,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-	body, input, select, textarea {
+	body, input, select, textarea, button{
 		color: #a2a2a2;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
@@ -1977,6 +1977,13 @@ input, select, textarea {
 		opacity: 1.0;
 	}
 
+	#submissionPage{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 /* Box */
 
 	.box {
@@ -2044,7 +2051,7 @@ input, select, textarea {
 		position: relative;
 	}
 
-		.image:before {
+		 .image:before {
 			-moz-transition: opacity 0.2s ease-in-out;
 			-webkit-transition: opacity 0.2s ease-in-out;
 			-ms-transition: opacity 0.2s ease-in-out;
@@ -2059,13 +2066,13 @@ input, select, textarea {
 			position: absolute;
 			top: 0;
 			width: 100%;
-		}
-
+		} 
+ 
 		.image.thumb {
 			text-align: center;
-		}
+		} 
 
-			.image.thumb:after {
+			 .image.thumb:after {
 				-moz-transition: opacity 0.2s ease-in-out;
 				-webkit-transition: opacity 0.2s ease-in-out;
 				-ms-transition: opacity 0.2s ease-in-out;
@@ -2087,18 +2094,18 @@ input, select, textarea {
 				text-decoration: none;
 				top: 50%;
 				white-space: nowrap;
-			}
+			} 
 
 			.image.thumb:hover:after {
 				opacity: 1.0;
-			}
+			} 
 
-			.image.thumb:hover:before {
+			 .image.thumb:hover:before {
 				background: url("images/overlay.png"), url("images/overlay.png");
 				opacity: 1.0;
-			}
+			} 
 
-		.image img {
+		 .image img {
 			border-radius: 0.35em;
 			display: block;
 		}
@@ -2121,7 +2128,7 @@ input, select, textarea {
 
 			.image.left img, .image.right img {
 				width: 100%;
-			}
+			} 
 
 		.image.fit {
 			display: block;
@@ -2241,7 +2248,7 @@ input, select, textarea {
 
 /* Actions */
 
-	ul.actions {
+	 ul.actions {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2308,6 +2315,10 @@ input, select, textarea {
 
 			ul.actions.fit.stacked {
 				width: 100%;
+			} 
+
+			form ul {
+				margin-top: 1em;
 			}
 
 		@media screen and (max-width: 480px) {
@@ -2648,7 +2659,7 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 10.25em;
+			width: 7.25em;
 		}
 
 /* Footer */

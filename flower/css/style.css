@@ -1,0 +1,32 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  margin: 0;
+  background-color: #f0f0f0; /* Optional background */
+}
+
+canvas {
+  width: 25%;
+  border: 10px solid black;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

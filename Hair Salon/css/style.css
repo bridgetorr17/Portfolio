@@ -1,0 +1,247 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html *{
+  font-size: 62.5%;
+  font-family: "Bona Nova SC", sans-serif;
+  color: black;
+  list-style: none;
+  text-decoration: none;
+}
+
+h1{
+  font-size: 4rem;
+  font-weight: 400;
+  width: 50%;
+}
+
+h2{
+  font-size: 0.7rem;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+h4{
+  font-size: 0.5rem;
+}
+
+.btn{
+  display: block;
+  width: 5.5rem;
+  font-size: 0.5rem;
+  background: black;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+/******************************************
+/* HEADER LAYOUT
+/*******************************************/
+header {
+  background: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul{
+  flex-basis: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header nav ul li,
+header > img,
+header a{
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+/******************************************
+/* TOP SECTION LAYOUT
+/*******************************************/
+.top{
+  background-image: url(https://media.istockphoto.com/id/1170764333/photo/young-brown-haired-woman-is-touching-softly-owne-hair-hair-care.jpg?s=612x612&w=0&k=20&c=T-4H7toGVtpcW49VNgPiMfV8NC79uP0gINHj-JJkBDg=);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 10%;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+}
+
+.top *{
+  color: white;
+}
+
+.top p{
+  font-size: 0.8rem;
+}
+
+.top > section > .btn{
+  margin-bottom: 3rem;
+}
+
+.top aside{
+  width: 25%;
+  background: black;
+  padding: 1rem;
+}
+
+.top span{
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.reverseBtn{
+  background: white;
+  color: black;
+}
+
+/******************************************
+/* MIDDLE-1 SECTION LAYOUT
+/*******************************************/
+.middle-1{
+  display: flex;
+  justify-content: center;
+  padding: 3rem 10%;
+}
+
+.middle-1 section{
+  text-align: center;
+  padding: 1rem;
+}
+
+.middle-1 section *{
+  padding: 0.25rem 0;
+}
+
+.middle-1 section i{
+  padding: 0.5rem;
+  background: rgba(185, 185, 185, 0.5);
+  border-radius: 50%;
+}
+
+.middle-1 section p{
+  font-size: 0.5rem;
+}
+
+/******************************************
+/* MIDDLE-2 SECTION LAYOUT
+/*******************************************/
+
+.middle-2{
+  display: flex;
+  justify-content: space-around;
+  background: rgba(185, 185, 185, 0.5);
+  padding: 3rem;
+}
+
+.middle-2 section{
+  width: 50%;
+}
+
+.middle-2 section:first-of-type{
+  padding-right: 2rem;
+}
+
+.middle-2 p{
+  font-size: 0.5rem;
+}
+/******************************************
+/* MEDIA QUERY STYLES
+/*******************************************/
+@media all and (max-width:450px){
+  header img,
+  header > a{
+    display: none;
+  }
+
+  header nav ul{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .top{
+    background-position: 115%;
+    background-repeat: repeat-x;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .top h1{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 2rem;
+    width: 20%;
+    text-align: right;
+    text-wrap: nowrap;
+    padding-right: 2rem;
+  }
+
+  .top > section{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .top aside{
+    width: 80%;
+  }
+
+  .top > section > .btn{
+    width: 80%;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .desktop{
+    display: none;
+  }
+
+  .middle-1,
+  .middle-2{
+    flex-direction: column;
+  }
+
+  .middle-2 section:first-of-type,
+  .middle-2 section{
+    width: 100%;
+    padding: 0;
+  }
+
+  .middle-2 > section > a.btn{
+    width: 100%;
+  }
+
+  .middle-2 iframe{
+    height: 200px;
+  }
+
+}
