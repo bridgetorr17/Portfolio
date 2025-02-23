@@ -4,6 +4,19 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// import axios from 'axios';
+
+// axios.get('/.netlify/functions/hello')
+//     .then((response) => {
+//         // handle success
+//         console.log(response);
+//         this.helloResult = response.data.message;
+//     })
+//     .catch((error) => {
+//         // handle error
+//         console.log(error);
+//     });
+
 (function($) {
 
 	var $window = $(window),

@@ -7,6 +7,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- <script>
+            const { API_KEY_map1 } = process.env;
+            console.log(`API Key: ${API_KEY_map1}`);
+        </script> -->
+        <script type="module">
+            import {API_KEY_map1, API_KEY_map2} from "./config.js";
+            console.log(`API Key: ${API_KEY_map1}`);
+        </script>
     </head>
     <body>
         <header class="primary-header group container">
@@ -40,7 +48,7 @@
                         <p>175 N State St <br> Chicaco, IL 60601</p>
                         <p><a href="http://www.thechicagotheatre.com/">thechicagotheatre.com</a><br> (312) 462-6300</p>
                     </div><!--
-                    --><iframe class="venue-map col-2-3" width="600" height="450" style="border:0" allowfullscreen loading="lazy" src=""></iframe>
+                    --><iframe class="venue-map col-2-3" width="600" height="450" style="border:0" allowfullscreen loading="lazy" src=API_KEY_map1></iframe>
                 </section>
                 <section class="venue-hotel">
                     <div class="col-1-3">
