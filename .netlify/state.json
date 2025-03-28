@@ -1,0 +1,21 @@
+{
+	"siteId": "bc344cc8-6cf8-420a-8433-85f26f0e3fe4",
+	"geolocation": {
+		"data": {
+			"city": "Charleston",
+			"country": {
+				"code": "US",
+				"name": "United States"
+			},
+			"subdivision": {
+				"code": "SC",
+				"name": "South Carolina"
+			},
+			"timezone": "America/New_York",
+			"latitude": 32.8215,
+			"longitude": -80.0568,
+			"postalCode": "29414"
+		},
+		"timestamp": 1740246981437
+	}
+}
