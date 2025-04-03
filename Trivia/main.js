@@ -50,10 +50,23 @@ class TriviaGame {
                 //show API data (question and answers)
                 this.displayQuestion();
                 this.displayChoices();
-                this.showTimer();
             })
+
+            //error handling of 429: API too many requests
             .catch(err => {
-                console.log(`error ${err}`)
+                console.log(`error ${err}`);
+                let timeLeft = 3;
+                document.querySelector('#timeLeft').innerHTML = timeLeft;
+                document.querySelector('#errorMessage').classList.toggle('hidden');
+                let intervalId = setInterval(() => {
+                    timeLeft--;
+                    document.querySelector('#timeLeft').innerHTML = timeLeft;
+                    if(timeLeft <= 0) {
+                        document.querySelector('#errorMessage').classList.toggle('hidden');
+                        clearInterval(intervalId);
+                        this.makeAPICall();
+                    }
+                },1000);
             });
     }
 
@@ -150,19 +163,6 @@ class TriviaGame {
         //remove prev answers 
         document.querySelector('#choices').innerHTML = '';
         document.querySelector('#result').innerHTML = '';
-    }
-
-    showTimer(){
-        //show timer text
-        document.querySelector('.timerSuggestion').hidden = false;
-
-        let timer = 6;
-        let intervalId = setInterval(() => {
-            timer--;
-            document.querySelector('.countdown').innerHTML = timer;
-
-            if(timer <= 0) clearInterval(intervalId);
-        }, 1000);
     }
 
 }
